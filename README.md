@@ -22,18 +22,33 @@ Considere o seguinte:
 a) O preço final para compra à vista tem um desconto de 20%:  
 b) A quantidade de parcelas pode ser 6, 12, 18, 24, 30, 36, 42, 48, 54 e 60:  
 
-Os percentuais de acréscimo seguem na tabela abaixo:  
-Quantidade de Parcelas | Percentual de Acréscimo sobre o preço final  
-6 | 3%  
-12 | 6%  
-18 | 9%  
-24 | 12%  
-30 | 15%  
-36 | 18%  
-42 | 21%  
-48 | 24%  
-54 | 27%  
-60 | 30%  
+Os percentuais de acréscimo seguem na tabela abaixo:   
+| Quantidade de Parcelas | Percentual de Acréscimo sobre o preço final |  
+| --- | --- |  
+| 6 | 3% |  
+| 12 | 6% |  
+| 18 | 9% |  
+| 24 | 12% |  
+| 30 | 15% |  
+| 36 | 18% |  
+| 42 | 21% |  
+| 48 | 24% |  
+| 54 | 27% |  
+| 60 | 30% |  
+
+Modelo de saída:  
+Digite o preço do carro: 20000  
+O preço final à vista com desconto 20% é: 16000.0  
+O preço final parcelado em 6 X é de R$ 20600,00 com parcelas de R$ 3433,33  
+O preço final parcelado em 12 X é de R$ 21200,00 com parcelas de R$ 1766,67  
+O preço final parcelado em 18 X é de R$ 21800,00 com parcelas de R$ 1211,11  
+O preço final parcelado em 24 X é de R$ 22400,00 com parcelas de R$ 933,33  
+O preço final parcelado em 30 X é de R$ 23000,00 com parcelas de R$ 766,67  
+O preço final parcelado em 36 X é de R$ 23600,00 com parcelas de R$ 655,56  
+O preço final parcelado em 42 X é de R$ 24200,00 com parcelas de R$ 576,19  
+O preço final parcelado em 48 X é de R$ 24800,00 com parcelas de R$ 516,67  
+O preço final parcelado em 54 X é de R$ 25400,00 com parcelas de R$ 470,37  
+O preço final parcelado em 60 X é de R$ 26000,00 com parcelas de R$ 433,33  
 
 Observação: Na saída do programa, utilize estrutura de repetição para apresentar a listagem, 
 conforme o modelo acima.

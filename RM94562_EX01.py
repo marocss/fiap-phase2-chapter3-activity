@@ -86,10 +86,9 @@ def get_preferred_week_day_or_days(preferred_week_days_selected: list) -> list:
     return most_voted_week_days
 
 
-# note: liked this solution because you can find out the vote for each collaborator. not possible in
-# check_best_week_day(). don't like it because it takes too much time and has unnecessary complexity, like
-# two for loops for example
-def verificar_melhor_dia_da_semana():
+# Note: liked this solution because you can find out the vote for each collaborator. don't like it because
+# it takes too much time and has unnecessary complexity, like two for loops for example
+def check_best_week_day():
     print(welcome_message)
 
     number_of_collaborators = get_user_input(message_inform_number_of_collaborators)
@@ -107,44 +106,8 @@ def verificar_melhor_dia_da_semana():
               f'dias receberam mais votos: {', '.join(most_voted_week_day_or_days)}.')
 
 
-def check_best_week_day():
-    # Create an empty dictionary to store the votes for each day of the week
-    votes = {'segunda-feira': 0, 'terça-feira': 0, 'quarta-feira': 0, 'quinta-feira': 0, 'sexta-feira': 0}
-
-    # Prompt the user to enter the number of collaborators who will participate in the vote
-    num_collaborators = int(input("How many collaborators will participate in the vote? "))
-
-    # Loop through each collaborator and prompt them to enter their preferred day of the week for the live event
-    for i in range(num_collaborators):
-        while True:
-            try:
-                preferred_day = input(
-                    f"Collaborator {i + 1}, please enter your preferred day of the week for the live event ("
-                    f"segunda-feira, terça-feira, quarta-feira, quinta-feira, sexta-feira): ")
-                if preferred_day not in votes:
-                    raise ValueError
-                votes[preferred_day] += 1
-                break
-            except ValueError:
-                print(
-                    "Invalid day of the week. Please enter one of the following: segunda-feira, terça-feira, "
-                    "quarta-feira, quinta-feira, sexta-feira")
-
-    # Find the day of the week with the most votes
-    max_votes = max(votes.values())
-    best_day = [day for day, votes in votes.items() if votes == max_votes]
-
-    # Print the best day(s) for the live event, according to the collaborators
-    if len(best_day) == 1:
-        print(f"The best day for the live event, according to the collaborators, is {best_day[0]}.")
-    else:
-        print(
-            f"There was a tie for the best day for the live event, according to the collaborators. The following "
-            f"days received the most votes: {', '.join(best_day)}.")
-
-
 def main():
-    verificar_melhor_dia_da_semana()
+    check_best_week_day()
 
 
 if __name__ == '__main__':
