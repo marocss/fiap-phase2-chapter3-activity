@@ -96,4 +96,4 @@ Escreva um programa que receba o tipo de investimento do qual se deseja realizar
 um resgate (1 para CDB, 2 para LCI e 3 para LCA), o valor a ser resgatado e o número de dias que esse 
 valor permaneceu investido e, se for o caso, calcule o valor referente ao imposto de renda.
 
-Atenção! O programa deve consistir se o investimento fornecido é válido, ou seja, 1, 2 o 3.
+Atenção! O programa deve consistir se o investimento fornecido é válido, ou seja, 1, 2 ou 3.

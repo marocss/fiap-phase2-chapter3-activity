@@ -23,7 +23,6 @@
 # Total: R$ 1200,00 Juros: R$ 200,00 Número de parcelas: 9 Valor da Parcela: R$ 133,33
 # Total: R$ 1250,00 Juros: R$ 250,00 Número de parcelas: 12 Valor da Parcela: R$ 104,17
 
-
 def get_user_input() -> float:
     while True:
         try:
