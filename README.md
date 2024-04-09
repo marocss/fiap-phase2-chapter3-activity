@@ -60,12 +60,21 @@ junto à Fintech. Faça um programa que receba o valor de uma dívida e mostre u
 Valor da dívida, valor do juro, quantidade de parcelas e valor da parcela.  
 
 Os juros e a quantidade de parcelas seguem a tabela:  
-Quantidade de Parcelas | % de juros sobre o valor inicial da dívida  
-1 | 0  
-3 | 10  
-6 | 15  
-9 | 20  
-12 | 25  
+| Quantidade de Parcelas da dívida | % de juros sobre o valor inicial da dívida |
+| --- | --- |
+| 1 | 0% |
+| 3 | 10% |
+| 6 | 15% |
+| 9 | 20% |
+| 12 | 25% |
+
+Exemplo de saída do programa:
+Digite o valor da dívida: 1000
+Total: R$ 1000,00 Juros: R$ 0,00 Número de parcelas: 1 Valor da Parcela: R$ 1000,00
+Total: R$ 1100,00 Juros: R$ 100,00 Número de parcelas: 3 Valor da Parcela: R$ 366,67
+Total: R$ 1150,00 Juros: R$ 150,00 Número de parcelas: 6 Valor da Parcela: R$ 191,67
+Total: R$ 1200,00 Juros: R$ 200,00 Número de parcelas: 9 Valor da Parcela: R$ 133,33
+Total: R$ 1250,00 Juros: R$ 250,00 Número de parcelas: 12 Valor da Parcela: R$ 104,17
 
 Observação: Na saída do programa, utilize estrutura de repetição para apresentar a listagem, 
 conforme o modelo acima.

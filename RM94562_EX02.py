@@ -68,7 +68,7 @@ def calculate_car_price():
     in_cash_discount = 0.2
     interest_increase_per_installments_options = 0.03
     installments_increase_per_option = 6
-    number_of_payment_options = 11  # à vista, 6, 12, 18,...
+    number_of_payment_options = 11  # à vista, 6, 12, 18, 24, 30,...
 
     car_price = get_user_input()
 
