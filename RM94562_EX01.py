@@ -15,9 +15,6 @@
 # colaborador informa um dia da semana. Formato: (xxxx)-feira
 # verificar e exibir qual o dia escolhido
 
-welcome_message = ('Bem-vindo(a) à votação da Bidu para escolher o melhor dia da semana para a realização '
-                   'das lives com o time da mentoria financeira!\n')
-message_inform_number_of_collaborators = 'Quantos colaboradores vão participar da votação? '
 message_error_number_of_collaborators = 'Valor inválido. Por favor, informe um número inteiro positivo.\n'
 valid_week_days = ['segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira']
 
@@ -56,32 +53,28 @@ def get_collaborators_votes(number_of_collaborators: int) -> list:
 
         preferred_week_days_selected.append(preferred_week_day)
     else:
-        print('\nFim da votação. Realizando a contagem...\n')
+        print('\nFim da votação.\nRealizando a contagem...\n')
 
     return preferred_week_days_selected
 
 
+# 3 for loops is insane
 def get_preferred_week_day_or_days(preferred_week_days_selected: list) -> list:
-    greatest_number_of_occurrences = 0
-    already_verified_week_days = []
-    most_voted_week_days = []
+    week_day_count = {}
+
+    # initializes week_day_count dict
+    for week_day in valid_week_days:
+        week_day_count[week_day] = 0
 
     for week_day in preferred_week_days_selected:
-        if week_day in already_verified_week_days:
-            continue
+        week_day_count[week_day] += 1
 
-        already_verified_week_days.append(week_day)
-        occurrences = preferred_week_days_selected.count(week_day)
+    max_count = max(week_day_count.values())
+    most_voted_week_days = []
 
-        if occurrences >= greatest_number_of_occurrences:
-            previous_greatest_number_of_occurrences = greatest_number_of_occurrences
-            greatest_number_of_occurrences = occurrences
-
-            if greatest_number_of_occurrences > previous_greatest_number_of_occurrences:
-                most_voted_week_days[:] = []
-                most_voted_week_days.append(week_day)
-            else:
-                most_voted_week_days.append(week_day)
+    for week_day, count in week_day_count.items():
+        if count == max_count:
+            most_voted_week_days.append(week_day)
 
     return most_voted_week_days
 
@@ -89,9 +82,10 @@ def get_preferred_week_day_or_days(preferred_week_days_selected: list) -> list:
 # Note: liked this solution because you can find out the vote for each collaborator. don't like it because
 # it takes too much time and has unnecessary complexity, like two for loops for example
 def check_best_week_day():
-    print(welcome_message)
+    print('Bem-vindo(a) à votação da Bidu para escolher o melhor dia da semana para a realização '
+          'das lives com o time da mentoria financeira!\n')
 
-    number_of_collaborators = get_user_input(message_inform_number_of_collaborators)
+    number_of_collaborators = get_user_input('Quantos colaboradores vão participar da votação? ')
     print(f'Ok. A votação será realizada com {number_of_collaborators} colaboradores. '
           f'Preparando para coletar os votos...')
 
